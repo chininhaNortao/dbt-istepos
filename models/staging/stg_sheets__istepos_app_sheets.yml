@@ -1,0 +1,20 @@
+version: 2
+
+models:
+    - name: istepos_app_sheets
+      description: "Tabela fonte com os dados de presença"
+      columns:
+          - name: Carimbo_de_data_hora
+            description: "Periodo em que o atleta preencheu o formulario."
+
+          - name: Endere__o_de_e_mail
+            description: "Endereco de email do atleta."
+
+          - name: Data_Treino
+            description: "Data e dia que foi realizado o treino."
+
+          - name: Participou_do_treino
+            description: "Resposta de participacao do treino pelo atleta."
+
+          - name: Caso_N__o__aqui____o_espa__o_da_Justificativa_
+            description: "Espaço que o atleta pode colocar a justitificativa, caso tenha faltado ao treino."
