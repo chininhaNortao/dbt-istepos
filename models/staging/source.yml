@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: sources
+    database: 'cn-analytics-project'
+    schema: istepos_app  
+    tables:
+      - name: istepos_app_sheets

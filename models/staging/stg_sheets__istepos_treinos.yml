@@ -1,0 +1,27 @@
+
+version: 2
+
+models:
+    - name: stg_sheets__istepos_treinos
+      description: "Tabela com as dimensoes de data a partir dos dados de treino."
+      columns:
+          - name: data_completa_treino
+            description: "Data e dia que foi realizado o treino."
+
+          - name: data_treino
+            description: "Data foi realizado o treino."
+
+          - name: dia_treino
+            description: "Nome do dia da semana que foi realizado o treino."
+
+          - name: numero_treino
+            description: "Qual é o numero do treino."
+
+          - name: data_dia_treino
+            description: "Dia que foi realizado o treino."
+
+          - name: data_mes_treino
+            description: "Mes que foi realizado o treino."
+
+          - name: data_ano_treino
+            description: "Ano que foi realizado o treino."
