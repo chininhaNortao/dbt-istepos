@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: sources
+    database: 'cn-analytics-project'
+    schema: istepos_app  
+    tables:
+      - name: istepos_app_sheets
+        description: Tabela com as informacoes da coleta do Google Forms, o dado bruto que recebemos da coleta dos formularios.
+
+      - name: sheets_informacao_atleta
+        description: Tabela com as informacoes dos atletas, id, nome, setor, posicao.
+
+      - name: sheets_relacao_email_atleta
+        description: Tabela com relacao entre ID e Email, para fazer as relacoes entre os emails e IDs.

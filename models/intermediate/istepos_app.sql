@@ -40,7 +40,6 @@ with
             datetime_preenchimento
             , email_atleta
             , concat('Treino Nº ', numero_treino) as numero_treino
-            , left(data_treino, 5) as teste_data
             , data_completa_treino
             , dia_treino
             , data_treino

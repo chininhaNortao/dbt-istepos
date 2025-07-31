@@ -1,0 +1,20 @@
+version: 2
+
+models:
+    - name: stg_sheets__informacao_atleta
+      description: >
+        "Tabela com as informacoes dos atletas, id, nome, setor, posicao.
+        
+        Possuindo apenas os id de atletas ja cadastrados, ou seja, que ja realizaram pelo menos um treino."
+      columns:
+          - name: id_atleta
+            description: "To do."
+
+          - name: nome_atleta
+            description: "To do."
+
+          - name: setor_atleta
+            description: "To do."
+
+          - name: posicao_atleta
+            description: "To do."
