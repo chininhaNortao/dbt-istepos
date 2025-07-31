@@ -1,0 +1,12 @@
+version: 2
+
+models:
+    - name: stg_sheets__relacao_email_atleta
+      description: >
+        " Tabela com relacao entre ID e Email, para fazer as relacoes entre os emails e IDs."
+      columns:
+          - name: email
+            description: "To do."
+
+          - name: id_atleta
+            description: "To do."
