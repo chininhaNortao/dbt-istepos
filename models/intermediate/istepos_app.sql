@@ -3,12 +3,17 @@
 with 
     istepos_app as (
         select *
-        from {{ ref('stg_sheets__istepos_app_sheets') }}
+        from {{ ref('stg_sheets__istepos_app') }}
     )
 
     , training_data as (
         select *
         from {{ ref('stg_sheets__istepos_treinos') }}
+    )
+
+    , relacao_email_id as (
+        select *
+        from {{ ref('stg_sheets__relacao_email_atleta') }}
     )
 
     , get_number_training as (
@@ -35,10 +40,20 @@ with
         from get_number_training
     )
 
+    , getting_id_athlete as (
+        select 
+            cohorting_days.*
+            , relacao_email_id.id_atleta
+        from cohorting_days
+        left join relacao_email_id on
+            cohorting_days.email_atleta = relacao_email_id.email
+    )
+
     , renamed as (
         select 
             datetime_preenchimento
             , email_atleta
+            , id_atleta
             , concat('Treino Nº ', numero_treino) as numero_treino
             , data_completa_treino
             , dia_treino
@@ -46,7 +61,7 @@ with
             , periodo_do_mes
             , is_participou_treino
             , texto_justificativa
-        from cohorting_days
+        from getting_id_athlete
     )
 
 select *
