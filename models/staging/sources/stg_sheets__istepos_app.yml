@@ -1,7 +1,7 @@
 version: 2
 
 models:
-    - name: istepos_app_sheets
+    - name: stg_sheets__istepos_app
       description: "Tabela fonte com os dados de presença"
       columns:
           - name: Carimbo_de_data_hora
