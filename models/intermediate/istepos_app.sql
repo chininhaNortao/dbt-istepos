@@ -19,7 +19,6 @@ with
     , get_number_training as (
         select
             istepos_app.*
-            , training_data.dia_treino
             , training_data.numero_treino
             , training_data.data_treino
             , training_data.data_dia_treino
@@ -56,7 +55,7 @@ with
             , id_atleta
             , concat('Treino Nº ', numero_treino) as numero_treino
             , data_completa_treino
-            , dia_treino
+            , data_dia_treino
             , data_treino
             , periodo_do_mes
             , is_participou_treino
