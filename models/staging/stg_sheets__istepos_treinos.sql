@@ -29,16 +29,20 @@ with
     , get_units_time as (
         select 
             *
-            , split(data_treino, '/')[0] as data_dia_treino
-            , split(data_treino, '/')[1] as data_mes_treino
-            , split(data_treino, '/')[2] as data_ano_treino
+            , replace(split(data_treino, '/')[0],' ','') as data_dia_treino
+            , replace(split(data_treino, '/')[1],' ','') as data_mes_treino
+            , replace(split(data_treino, '/')[2],' ','') as data_ano_treino
         from creating_row_number_rule
     )
 
     , creating_new_date as (
         select 
-            * except (data_treino)
+            data_completa_treino
             , data_ano_treino || '-' || data_mes_treino || '-' || data_dia_treino as data_treino
+            , numero_treino
+            , data_dia_treino
+            , data_mes_treino
+            , data_ano_treino
         from get_units_time
     )
 
