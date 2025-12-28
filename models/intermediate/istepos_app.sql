@@ -53,7 +53,8 @@ with
             datetime_preenchimento
             , email_atleta
             , id_atleta
-            , concat('Treino Nº ', numero_treino) as numero_treino
+            , concat('Treino Nº ', numero_treino) as descricao_numero_treino
+            , numero_treino
             , data_completa_treino
             , data_dia_treino
             , data_treino
