@@ -1,7 +1,7 @@
 with
-    istepos_app as (
+    streaks as (
         select *
-        from {{ ref('istepos_app') }}
+        from {{ ref('int_istepos_streaks') }}
     )
 
     , dim_atleta as (
@@ -11,13 +11,13 @@ with
 
     , joining_athlets as (
         select 
-            istepos_app.*
+            streaks.*
             , dim_atleta.nome_atleta
             , dim_atleta.setor_atleta
             , dim_atleta.posicao_atleta
-        from istepos_app
+        from streaks
         left join dim_atleta on 
-            istepos_app.id_atleta = dim_atleta.id_atleta
+            streaks.id_atleta = dim_atleta.id_atleta
     )
 
 select *
